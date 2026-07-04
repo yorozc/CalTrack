@@ -5,6 +5,9 @@ class Log:
         self._id = uuid.uuid4().hex
         self._food_id = food_id
         self._date = date.today().isoformat()
+
+    def __str__(self):
+        return f"Id: {self.id}, Date: {self.date}"
         
     @property
     def id(self):

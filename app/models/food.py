@@ -4,6 +4,9 @@ class Food:
         self._id = uuid.uuid4().hex
         self._food_name = food_name
         self._calories = calories
+
+    def __str__(self):
+        return f"Name: {self.food_name}, Calories: {self.calories}"
     
     @property
     def id(self):
